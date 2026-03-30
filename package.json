@@ -1,0 +1,9 @@
+{
+  "name": "wp-link-auditor-auth",
+  "version": "1.0.0",
+  "description": "OAuth proxy for WP Link Auditor Google Search Console integration",
+  "private": true,
+  "engines": {
+    "node": ">=18"
+  }
+}
