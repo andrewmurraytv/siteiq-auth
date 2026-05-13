@@ -1,5 +1,5 @@
 /**
- * WP Link Auditor — GSC OAuth Proxy
+ * SEOMedic — GSC OAuth Proxy
  * GET /api/connect?site_url={wp_admin_callback_url}&state={nonce}
  *
  * Encodes site_url + nonce into Google's state param,

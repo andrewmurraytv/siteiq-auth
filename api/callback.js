@@ -1,5 +1,5 @@
 /**
- * SiteIQ — GSC OAuth Proxy
+ * SEOMedic — GSC OAuth Proxy
  * GET /api/callback?code=...&state=...
  *
  * Called by Google after the user grants consent.

@@ -1,7 +1,7 @@
 {
-  "name": "wp-link-auditor-auth",
+  "name": "seomedic-auth",
   "version": "1.0.0",
-  "description": "OAuth proxy for WP Link Auditor Google Search Console integration",
+  "description": "OAuth proxy for SEOMedic Google Search Console integration",
   "private": true,
   "engines": {
     "node": ">=18"

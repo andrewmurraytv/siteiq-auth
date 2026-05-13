@@ -1,5 +1,5 @@
 /**
- * WP Link Auditor — GSC OAuth Proxy
+ * SEOMedic — GSC OAuth Proxy
  * POST /api/refresh
  * Body: { refresh_token: "..." }
  *
