@@ -1,5 +1,5 @@
 /**
- * WP Link Auditor — GSC OAuth Proxy
+ * SiteIQ — GSC OAuth Proxy
  * GET /api/callback?code=...&state=...
  *
  * Called by Google after the user grants consent.
@@ -33,8 +33,12 @@ export default async function handler(req, res) {
   }
 
   const proxyBase = process.env.PROXY_URL;
-  if (!proxyBase || !process.env.GOOGLE_CLIENT_ID || !process.env.GOOGLE_CLIENT_SECRET) {
-    return redirectWithError(res, site_url, 'Proxy is not fully configured.');
+  const missing = [];
+  if (!proxyBase)                          missing.push('PROXY_URL');
+  if (!process.env.GOOGLE_CLIENT_ID)       missing.push('GOOGLE_CLIENT_ID');
+  if (!process.env.GOOGLE_CLIENT_SECRET)   missing.push('GOOGLE_CLIENT_SECRET');
+  if (missing.length) {
+    return redirectWithError(res, site_url, `Proxy is not fully configured. Missing: ${missing.join(', ')}`);
   }
 
   // Exchange authorization code for access + refresh tokens
